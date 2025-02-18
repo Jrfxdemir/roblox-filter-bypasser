@@ -1,0 +1,104 @@
+.main {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  background-color: #4f4557;
+  border: 1px solid #4f4557;
+  border-radius: 10px;
+  padding: 10px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s, box-shadow 0.5s; /* Smooth transition */
+}
+.main:hover {
+  box-shadow: 0 0 50px 15px #f4eee0;
+  transform: translate(-50%, -52%); /* Move up while keeping centered */
+  transition: 0.5s;
+}
+.main:hover span {
+  color: #f4eee0;
+  transition: 1s;
+}
+.main:hover p {
+  opacity: 1;
+  transition: 1s;
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+  background-color: #6d5d6e;
+  border-radius: 3px;
+  border: solid 2px #393646;
+  resize: none;
+  font-size: 15px;
+}
+.word {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.bypass {
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.cevir {
+  width: 100px;
+  background-color: #6d5d6e;
+  cursor: pointer;
+  height: 50px;
+  margin: auto;
+  display: table;
+  margin: 0 auto;
+  border: none;
+  border-radius: 3em;
+}
+.cevir:hover {
+  background-color: #f4eee0;
+  transform: translateY(-2px);
+}
+span {
+  color: rgb(39, 39, 39);
+  font-size: x-large;
+  font-family: "Courier New", monospace;
+  display: table;
+  margin: 0 auto;
+}
+p {
+  display: table;
+  margin-top: 120px;
+  opacity: 0.1;
+}
+
+.copy-message {
+  position: fixed;
+  bottom: -50px; /* Başlangıçta görünmez */
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideUp 2s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -50px; /* Aşağıda başlar */
+    opacity: 0;
+  }
+  30% {
+    bottom: 20px; /* Yukarı çıkar */
+    opacity: 1;
+  }
+  70% {
+    bottom: 20px; /* Sabit kalır */
+    opacity: 1;
+  }
+  100% {
+    bottom: -50px; /* Aşağı iner ve kaybolur */
+    opacity: 0;
+  }
+}
